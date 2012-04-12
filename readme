@@ -5,3 +5,40 @@
 */
 
 Bu Pluging genel anlamda Jquery Ajax sorgularının sonunda uyarı vermek amacı ile yazılmıştır.
+
+Document ready de ön tanımlama olmaksızın çalışabilir.
+
+2 tip alert metodu vardır. Her alert metodununda kendi içinde iki tipi vardır.
+
+1.tip gönderim (tek satır alert) :
+
+$.ajax({
+	type:'POST',
+    url:'',
+    data:'',
+    success: function(result){
+		$.fn.vivekaAlert('deneme yazısı'); // 1.Kullanım şekli ekranda sace 1 satırdan oluşan bir alert kutusu çıkarır.
+    },
+    error: function(error){
+    	console.error(error.responseText);
+    }
+});
+
+2.tip gönderim (çoklu satır alert) :
+
+$.fn.vivekaAlert('deneme yazısı 1 -> deneme yazısı 2'); // 2.Kullanım şekli ekranda 2 satırdan oluşan bir alert kutusu çıkarır.
+
+Not : eger ikiden fazla satır olmasını isteniyorsa, diğer satırlar '->' (ok) işareti ile ayrılmalıdırlar.
+
+example: $.fn.vivekaAlert('deneme yazısı 1 -> deneme yazısı 2 -> deneme yazısı 3 -> deneme yazısı 4');
+
+3.tip gönderim (tek satır çoklu alert) :
+
+Bu gönderim tipinde birden çok kutu açılmasını mümkündür. gönderim array [] tipinde olmalıdır ve default options da eğer multi özelliği false ise 
+fonksiyonun ikinci parametresinde bu özellik true olarak belirtilmelidir.
+
+example: $.fn.vivekaAlert(['deneme yazısı','deneme yazısı 2'],{multi:true}); // 3.kullanım şekli ekrana 1 satırdan oluşan iki farklı alert kutusu çıkarır.
+
+4.tip gönderim (çoklu satır çoklu alert) : 
+
+example: $.fn.vivekaAlert(['deneme yazısı -> birinci kutu','deneme yazısı 2 -> ikinci kutu'],{multi:true}); // 3.kullanım şekli ekrana 2 satırdan oluşan iki farklı alert kutusu çıkarır.
