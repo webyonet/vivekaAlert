@@ -1,0 +1,43 @@
+@import url("CssReset.css");
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+aside.alertBox {
+	background: none repeat scroll 0 0 #F65950;
+	border: 1px solid #A71D13;
+	border-radius: 3px 3px 3px 3px;
+	padding: 20px;
+	z-index: 9888;
+	clear: left;
+	float: left;
+}
+p.vivekaSeperator {
+	border-bottom:1px solid #fff;
+	width:100%;
+	margin:5px 0;
+}
+div.close {
+	background: url("../imgs/sprite.png") no-repeat scroll 0 -18px transparent;
+	cursor: pointer;
+	display: block;
+	height: 8px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 8px;
+	z-index: 9999;
+}
+div.close:hover {
+	background-position:0 0;
+}
+p.paragraph {
+	color: #FFFFFF;
+	line-height: 15px;
+	width: 100%;
+	word-wrap: break-word;
+}
+div.vivekaMainFrame {
+	left: 10px;
+	top: 10px;
+}
